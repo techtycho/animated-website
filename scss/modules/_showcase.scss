@@ -1,0 +1,69 @@
+.showcase {
+  @extend %primary-colors-applied;
+
+  height: $showcase-height;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    color: inherit;
+  }
+
+  &-content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      $index: 0;
+
+      @include animate-children(anim-fade, (4 + $index), 0);
+      @for $i from 1 through 4 {
+        :nth-child(#{$i}) {
+          opacity: 0;
+        }
+      }
+
+      font-size: 50px;
+      line-height: 1.2;
+    }
+
+    p {
+      $index: 1;
+      @include animate(anim-fade, (4 + $index) * 0.2);
+
+      opacity: 0;
+      margin: 20px 0;
+    }
+
+    .btn-primary {
+      $index: 2;
+      @include animate(anim-fade, (4 + $index) * 0.2);
+
+      opacity: 0;
+    }
+
+    .btn-secondary {
+      $index: 3;
+      @include animate(anim-fade, (4 + $index) * 0.2);
+
+      opacity: 0;
+    }
+
+    img {
+      $index: 4;
+      @include animate(anim-fade, (4 + $index) * 0.2);
+
+      opacity: 0;
+      width: 50%;
+    }
+  }
+}
+
+.showcase-split {
+  background-color: $primary-color;
+  height: 100px;
+  transform: skewY(-3deg) translateY(-50px);
+}

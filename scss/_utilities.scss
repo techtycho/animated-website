@@ -1,0 +1,10 @@
+.container {
+  max-width: $container-width;
+  padding: 0 30px;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+.current {
+  color: $accent-color;
+}

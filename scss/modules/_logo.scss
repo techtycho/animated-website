@@ -1,0 +1,17 @@
+.logo {
+  font-family: $secondary-font;
+  font-weight: 700;
+  color: correct-color($theme-color);
+  transition: color $link-fade-anim-duration;
+
+  span {
+    font-family: $default-font;
+    color: $accent-color;
+    font-weight: 500;
+    font-size: 1.3rem;
+  }
+
+  &:hover {
+    color: $accent-color;
+  }
+}

@@ -1,0 +1,12 @@
+@mixin apply-theme($color) {
+  background-color: $color;
+  color: correct-color($color);
+}
+
+@function correct-color($color) {
+  @if (lightness($color) > 70%) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}

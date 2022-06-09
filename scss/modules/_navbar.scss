@@ -1,0 +1,29 @@
+nav {
+  @extend %primary-colors-applied;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    ul {
+      display: flex;
+      list-style-type: none;
+
+      li {
+        padding: 15px;
+
+        a {
+          transition: color $link-fade-anim-duration;
+          font-weight: 600;
+          color: inherit;
+
+          &:hover,
+          &.current {
+            color: $accent-color;
+          }
+        }
+      }
+    }
+  }
+}

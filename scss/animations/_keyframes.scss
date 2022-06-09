@@ -1,0 +1,28 @@
+@mixin animate-children($anim, $num, $delay) {
+  @for $i from 1 through $num {
+    :nth-child(#{$i}) {
+      animation: $anim 1s;
+      animation-delay: #{($i * 0.2) + $delay}s;
+      animation-timing-function: linear;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+@mixin animate($anim, $delay) {
+  animation: $anim 1s;
+  animation-delay: #{$delay}s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+// Fade In Animation
+@keyframes anim-fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

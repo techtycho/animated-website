@@ -1,0 +1,5 @@
+$theme-color: $primary-color;
+
+%primary-colors-applied {
+  @include apply-theme($theme-color);
+}
