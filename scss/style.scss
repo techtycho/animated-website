@@ -5,13 +5,14 @@
 @import "elements";
 @import "external";
 
-@import "mobile/mobile";
 @import "components/button";
 @import "animations/keyframes";
 
 @import "modules/navbar";
 @import "modules/logo";
 @import "modules/showcase";
+
+@import "mobile/mobile"; // Order Matters
 
 * {
   box-sizing: border-box;
