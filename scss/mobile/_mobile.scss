@@ -1,0 +1,16 @@
+@media (max-width: 900px) {
+  .showcase {
+    .showcase-content {
+      display: block;
+
+      img {
+        width: 90%;
+        margin-top: 50px;
+      }
+    }
+  }
+
+  .showcase-split {
+    margin-top: 100px;
+  }
+}

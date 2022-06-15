@@ -52,12 +52,17 @@
       opacity: 0;
     }
 
+    .content {
+      order: 1;
+    }
+
     img {
       $index: 4;
       @include animate(anim-fade, (4 + $index) * 0.2);
 
       opacity: 0;
       width: 50%;
+      order: 2;
     }
   }
 }
